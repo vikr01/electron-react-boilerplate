@@ -23,7 +23,7 @@
     "package-win": "yarn build && electron-builder build --win --x64",
     "postinstall": "node -r babel-register internals/scripts/CheckNativeDep.js && yarn flow-typed && yarn build-dll && electron-builder install-app-deps package.json",
     "postlint-fix": "prettier --ignore-path .eslintignore --single-quote --write './**/*.*(js|jsx)'",
-    "postlint-styles-fix": "prettier --ignore-path .eslintignore --write '**/*.*(css|scss)'",
+    "postlint-styles-fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.*(css|scss)'",
     "precommit": "lint-staged",
     "prestart": "yarn build",
     "start": "cross-env NODE_ENV=production electron ./app/",
@@ -46,7 +46,7 @@
       "git add"
     ],
     "*.*(yml|css|scss|md)": [
-      "prettier --ignore-path .eslintignore --write",
+      "prettier --ignore-path .eslintignore --single-quote --write",
       "git add"
     ]
   },
@@ -176,6 +176,7 @@
     "spectron": "^3.8.0",
     "style-loader": "^0.21.0",
     "stylelint": "^9.4.0",
+    "stylelint-config-prettier": "^3.3.0",
     "stylelint-config-standard": "^18.2.0",
     "uglifyjs-webpack-plugin": "1.2.7",
     "url-loader": "^1.0.1",

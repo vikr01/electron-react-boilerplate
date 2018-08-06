@@ -142,7 +142,7 @@ css-modules loader. e.g. `app.global.css`
 If you want to import global css libraries (like `bootstrap`), you can just write the following code in `.global.css`:
 
 ```css
-@import "~bootstrap/dist/css/bootstrap.css";
+@import '~bootstrap/dist/css/bootstrap.css';
 ```
 
 ## Sass support
@@ -150,7 +150,7 @@ If you want to import global css libraries (like `bootstrap`), you can just writ
 If you want to use Sass in your app, you only need to import `.sass` files instead of `.css` once:
 
 ```js
-import "./app.global.scss";
+import './app.global.scss';
 ```
 
 ## Static Type Checking
